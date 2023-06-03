@@ -1,0 +1,27 @@
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+./scripts/run.sh disk build/i686_debug/image.img
+Reading package lists...
+Building dependency tree...
+Reading state information...
+qemu-system-x86 is already the newest version (1:7.2+dfsg-5+b1).
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+E820: base=0x0 length=0x9fc00 type=0x1
+E820: base=0x9fc00 length=0x400 type=0x2
+E820: base=0xf0000 length=0x10000 type=0x2
+E820: base=0x100000 length=0x1ee0000 type=0x1
+E820: base=0x1fe0000 length=0x20000 type=0x2
+[37m[PIC] Found 8259 PIC PIC.[0m
+[2;37m[Main] Boot device: 80[0m
+[2;37m[Main] Memory region count: 5[0m
+[2;37m[Main] MEM: start=0x0 length=0x9fc00 type=1[0m
+[2;37m[Main] MEM: start=0x9fc00 length=0x400 type=2[0m
+[2;37m[Main] MEM: start=0xf0000 length=0x10000 type=2[0m
+[2;37m[Main] MEM: start=0x100000 length=0x1ee0000 type=1[0m
+[2;37m[Main] MEM: start=0x1fe0000 length=0x20000 type=2[0m
+[37m[Info] This (Info) Message has been Received From the OS![0m
+[37m[Main] This (Main) Message has been Received From the OS![0m
+[1;33m[Warn] This (Warn) Message has been Received From the OS![0m
+[1;31m[Error] This (Error) Message has been Received From the OS![0m
+[1;37;41m[Main] This (Critical) Message has been Received From the OS![0m

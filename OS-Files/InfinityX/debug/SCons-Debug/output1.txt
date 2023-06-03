@@ -1,0 +1,80 @@
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+Creating disk image...
+> creating partition table...
+> formatting file using fat32...
+> installing stage1...
+> installing stage2...
+> mounting image to build/i686_debug/tmp_mount_1683355150...
+> cleaning up...
+scons: *** [build/i686_debug/image.img] ErrorReturnCode_1 : 
+
+  RAN: /usr/bin/guestmount build/i686_debug/tmp_mount_1683355150 --add=build/i686_debug/image.img --mount=/dev/sda1
+
+  STDOUT:
+
+
+  STDERR:
+libguestfs: trace: set_verbose true
+libguestfs: trace: set_verbose = 0
+libguestfs: create: flags = 0, handle = 0x564832948670, program = guestmount
+libguestfs: trace: set_recovery_proc false
+libguestfs: trace: set_recovery_proc = 0
+libguestfs: trace: add_drive "build/i686_debug/image.img"
+libguestfs: trace: add_drive = 0
+libguestfs: trace: launch
+libguestfs: trace: max_disks
+libguestfs: trace: max_disks = 255
+libguestfs: trace: get_tmpdir
+libguestfs: trace: get_tmpdir = "/tmp"
+libguestfs: trace: version
+libguestfs: trace: version = <struct guestfs_version = major: 1, minor: 46, release: 2, extra: , >
+libguestfs: trace: get_backend
+libguestfs: trace: get_backend = "direct"
+libguestfs: launch: program=guestmount
+libguestfs: launch: version=1.... (3478 more, please see e.stderr)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/SCons/Action.py", line 1280, in execute
+    result = self.execfunction(target=target, source=rsources, env=env)
+  File "/home/pranavverma/Project/InfinityX/image/SConscript", line 235, in build_image
+    build_disk(image, stage1, stage2, kernel, files, env)
+  File "/home/pranavverma/Project/InfinityX/image/SConscript", line 193, in build_disk
+    mount_fs(image, tempdir)
+  File "/home/pranavverma/Project/InfinityX/image/SConscript", line 152, in mount_fs
+    sh.guestmount(mount_dir, add=image, mount='/dev/sda1')
+  File "/usr/local/lib/python3.10/dist-packages/sh.py", line 1524, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/usr/local/lib/python3.10/dist-packages/sh.py", line 750, in __init__
+    self.wait()
+  File "/usr/local/lib/python3.10/dist-packages/sh.py", line 812, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/usr/local/lib/python3.10/dist-packages/sh.py", line 839, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_1: 
+
+  RAN: /usr/bin/guestmount build/i686_debug/tmp_mount_1683355150 --add=build/i686_debug/image.img --mount=/dev/sda1
+
+  STDOUT:
+
+
+  STDERR:
+libguestfs: trace: set_verbose true
+libguestfs: trace: set_verbose = 0
+libguestfs: create: flags = 0, handle = 0x564832948670, program = guestmount
+libguestfs: trace: set_recovery_proc false
+libguestfs: trace: set_recovery_proc = 0
+libguestfs: trace: add_drive "build/i686_debug/image.img"
+libguestfs: trace: add_drive = 0
+libguestfs: trace: launch
+libguestfs: trace: max_disks
+libguestfs: trace: max_disks = 255
+libguestfs: trace: get_tmpdir
+libguestfs: trace: get_tmpdir = "/tmp"
+libguestfs: trace: version
+libguestfs: trace: version = <struct guestfs_version = major: 1, minor: 46, release: 2, extra: , >
+libguestfs: trace: get_backend
+libguestfs: trace: get_backend = "direct"
+libguestfs: launch: program=guestmount
+libguestfs: launch: version=1.... (3478 more, please see e.stderr)
+scons: building terminated because of errors.

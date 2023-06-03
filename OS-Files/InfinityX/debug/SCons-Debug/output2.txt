@@ -1,0 +1,109 @@
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+Assembling [src/bootloader/stage1/boot.asm]
+Linking    [build/i686_debug/stage1_fat32/stage1.bin]
+Assembling [src/bootloader/stage2/crti.asm]
+Compiling  [src/bootloader/stage2/ctype.c]
+Compiling  [src/bootloader/stage2/disk.c]
+Compiling  [src/bootloader/stage2/elf.c]
+Compiling  [src/bootloader/stage2/fat.c]
+Compiling  [src/bootloader/stage2/main.c]
+Compiling  [src/bootloader/stage2/mbr.c]
+Compiling  [src/bootloader/stage2/memdetect.c]
+Compiling  [src/bootloader/stage2/memory.c]
+Compiling  [src/bootloader/stage2/stdio.c]
+Compiling  [src/bootloader/stage2/stdlib.c]
+Compiling  [src/bootloader/stage2/string.c]
+Assembling [src/bootloader/stage2/entry.asm]
+Assembling [src/bootloader/stage2/x86.asm]
+Compiling  [src/libs/core/dev/TextDevice.cpp]
+Compiling  [src/libs/core/arch/i686/E9Device.cpp]
+Compiling  [src/libs/core/arch/i686/VGATextDevice.cpp]
+Assembling [src/libs/core/arch/i686/IO.asm]
+Archiving  [build/i686_debug/libs/core/libcore.o]
+Ranlib     [build/i686_debug/libs/core/libcore.o]
+Assembling [src/bootloader/stage2/crtn.asm]
+Linking    [build/i686_debug/stage2/stage2.bin]
+Assembling [src/kernel/crti.asm]
+Compiling  [src/kernel/debug.c]
+Compiling  [src/kernel/main.c]
+Compiling  [src/kernel/memory.c]
+Compiling  [src/kernel/stdio.c]
+Compiling  [src/kernel/hal/hal.c]
+Compiling  [src/kernel/hal/vfs.c]
+Compiling  [src/kernel/arch/i686/e9.c]
+Compiling  [src/kernel/arch/i686/gdt.c]
+Compiling  [src/kernel/arch/i686/i8259.c]
+Compiling  [src/kernel/arch/i686/idt.c]
+Compiling  [src/kernel/arch/i686/io.c]
+Compiling  [src/kernel/arch/i686/irq.c]
+Compiling  [src/kernel/arch/i686/isr.c]
+Compiling  [src/kernel/arch/i686/isrs_gen.c]
+Compiling  [src/kernel/arch/i686/vga_text.c]
+Assembling [src/kernel/arch/i686/gdt_asm.asm]
+Assembling [src/kernel/arch/i686/idt_asm.asm]
+Assembling [src/kernel/arch/i686/io_asm.asm]
+Assembling [src/kernel/arch/i686/isr_asm.asm]
+Assembling [src/kernel/crtn.asm]
+Linking    [build/i686_debug/kernel/kernel.elf]
+/toolchains/i686-elf/bin/../lib/gcc/i686-elf/11.3.0/../../../../i686-elf/bin/ld: warning: build/i686_debug/kernel/kernel.elf has a LOAD segment with RWX permissions
+Creating disk image...
+> creating partition table...
+> formatting file using fat32...
+> installing stage1...
+> installing stage2...
+> mounting image to build/i686_debug/tmp_mount_1683355846...
+> cleaning up...
+scons: *** [build/i686_debug/image.img] ErrorReturnCode_1 : 
+
+  RAN: /usr/bin/guestmount build/i686_debug/tmp_mount_1683355846 --add=build/i686_debug/image.img --mount=/dev/sda1
+
+  STDOUT:
+
+
+  STDERR:
+libguestfs: error: /usr/bin/supermin exited with error status 1.
+To see full error messages you may need to enable debugging.
+Do:
+  export LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1
+and run the command again.  For further information, read:
+  http://libguestfs.org/guestfs-faq.1.html#debugging-libguestfs
+You can also run 'libguestfs-test-tool' and post the *complete* output
+into a bug report or message to the libguestfs mailing list.
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/SCons/Action.py", line 1280, in execute
+    result = self.execfunction(target=target, source=rsources, env=env)
+  File "/home/pranavverma/OS-Files/InfinityX/image/SConscript", line 235, in build_image
+    build_disk(image, stage1, stage2, kernel, files, env)
+  File "/home/pranavverma/OS-Files/InfinityX/image/SConscript", line 193, in build_disk
+    mount_fs(image, tempdir)
+  File "/home/pranavverma/OS-Files/InfinityX/image/SConscript", line 152, in mount_fs
+    sh.guestmount(mount_dir, add=image, mount='/dev/sda1')
+  File "/usr/local/lib/python3.10/dist-packages/sh.py", line 1524, in __call__
+    rc = self.__class__.RunningCommandCls(cmd, call_args, stdin, stdout, stderr)
+  File "/usr/local/lib/python3.10/dist-packages/sh.py", line 750, in __init__
+    self.wait()
+  File "/usr/local/lib/python3.10/dist-packages/sh.py", line 812, in wait
+    self.handle_command_exit_code(exit_code)
+  File "/usr/local/lib/python3.10/dist-packages/sh.py", line 839, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_1: 
+
+  RAN: /usr/bin/guestmount build/i686_debug/tmp_mount_1683355846 --add=build/i686_debug/image.img --mount=/dev/sda1
+
+  STDOUT:
+
+
+  STDERR:
+libguestfs: error: /usr/bin/supermin exited with error status 1.
+To see full error messages you may need to enable debugging.
+Do:
+  export LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1
+and run the command again.  For further information, read:
+  http://libguestfs.org/guestfs-faq.1.html#debugging-libguestfs
+You can also run 'libguestfs-test-tool' and post the *complete* output
+into a bug report or message to the libguestfs mailing list.
+
+scons: building terminated because of errors.
