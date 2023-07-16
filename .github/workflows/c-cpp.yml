@@ -1,0 +1,23 @@
+name: Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Update
+      run: sudo apt-get update
+    - name: Install Dependencies
+      run: sudo apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo wget nasm mtools python3 python3-pip python3-parted scons dosfstools libguestfs-tools qemu-system-x86
+    - name: Install Requirements
+      run: pip -r requirements.txt
+    - name: Run
+      run: scons run
