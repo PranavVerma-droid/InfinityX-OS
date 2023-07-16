@@ -16,8 +16,10 @@ jobs:
     - name: Update
       run: sudo apt-get update
     - name: Install Dependencies
-      run: sudo apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo wget nasm mtools python3 python3-pip python3-parted scons dosfstools libguestfs-tools qemu-system-x86 i686-elf-tools
+      run: sudo apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo wget nasm mtools python3 python3-pip python3-parted scons dosfstools libguestfs-tools qemu-system-x86
     - name: Install Requirements
       run: pip install -r requirements.txt
+    - name: Setup Toolchains
+      run: ./scripts/setup_toolchain
     - name: Run
       run: scons run
