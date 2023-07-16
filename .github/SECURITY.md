@@ -6,7 +6,7 @@ These are the Versions that are Currently Supported by this Policy:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0     | :x: |
+| 1.6     | ✔ |
 
 ## Reporting a Vulnerability
 
