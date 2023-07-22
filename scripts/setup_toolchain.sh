@@ -12,7 +12,7 @@ TARGET=i686-elf
 
 set -e
 
-TOOLCHAINS_DIR=
+TOOLCHAINS_DIR=/toolchains
 OPERATION='build'
 
 while test $# -gt 0

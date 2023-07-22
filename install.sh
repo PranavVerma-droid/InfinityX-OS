@@ -2,7 +2,7 @@
 
 echo "This is a Script Written by PranavVerma-droid"
 echo "This Script has been Written for the InfinityX OS"
-echo "This Script Only Works on the Ubuntu Platform!"
+echo "This Script Only Works on the Ubuntu/Raspbian Platform!"
 
 echo ""
 echo "Installing Dependencies...."
@@ -20,10 +20,13 @@ sudo apt-get install linux-image-generic
 
 
 python3 -m pip install -r requirements.txt
+echo ""
+echo "Where is the Local Path of THIS Folder? (ex: /home/user/Github/InfinityX-OS)"
+read LOCALPATH
 
 cd /
 sudo mkdir toolchains
-cd ~/OS-Files/InfinityX
+cd {LOCALPATH}
 
 chmod +x scripts/setup_toolchain.sh
 chmod +x scripts/run.sh
@@ -31,10 +34,8 @@ chmod +x scripts/run.sh
 scons toolchain
 
 echo ""
-echo "Done! Installed All Dependencies!"
+echo "Done! Installed All Dependencies & Toolchains!"
 echo ""
-
-
 echo "Now You can Make the OS! Run scons run"
 echo ""
 
