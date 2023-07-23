@@ -25,8 +25,8 @@ echo "Where is the Local Path of THIS Folder? (ex: /home/user/Github/InfinityX-O
 read LOCALPATH
 
 cd /
-sudo mkdir toolchains-InfinityX
-cd {LOCALPATH}
+sudo mkdir toolchains
+cd ${LOCALPATH}
 
 chmod +x scripts/setup_toolchain.sh
 chmod +x scripts/run.sh
