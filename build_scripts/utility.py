@@ -5,7 +5,6 @@ import os
 from SCons.Node.FS import Dir, File, Entry
 from SCons.Environment import Environment
 
-
 def ParseSize(size: str):
     size_match = re.match(r'([0-9\.]+)([kmg]?)', size, re.IGNORECASE)
     if size_match is None:

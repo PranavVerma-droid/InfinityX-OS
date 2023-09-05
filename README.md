@@ -59,7 +59,7 @@ For Windows, it is Recommended to Download VCXSRV - https://sourceforge.net/proj
 2. Only Run the OS - `./scripts/run.sh disk build/i686_debug/image.img` (After Compiling with `scons run`)
 3. Debug (Bochs) - `scons debug`
 4. Install Toolchain (GCC, BinUTILS) - `scons toolchain`
-5. Install all Dependencies (Ubuntu/Debian ONLY!) - `sudo bash install.sh`
+5. Install all Dependencies (Ubuntu/Debian ONLY!) - `chmod +x install.sh && sudo bash install.sh`
 
 
 
