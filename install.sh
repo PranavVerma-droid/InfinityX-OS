@@ -21,8 +21,8 @@ sudo apt-get install linux-image-generic
 
 python3 -m pip install -r requirements.txt
 echo ""
-echo "Where is the Local Path of THIS Folder? (ex: /home/user/Github/InfinityX-OS)"
-read LOCALPATH
+LOCALPATH=$(pwd)
+echo "The Current Local Path is $(pwd). Please Change it in the Script if it is Wrong (It needs to be Where the Repository Files Are.)
 
 cd /
 
