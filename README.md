@@ -1,4 +1,6 @@
 # 🌍 InfinityX-OS 🌍
+<i>This Project is No Longer Supported, as the Creator [PranavVerma-droid](https://portfolio.craftingrealm.tk) has moved to re-writing this OS as [InfinityX-OS-2](https://github.com/PranavVerma-droid/InfinityX-OS-2). This Project MAY be unarchived in the future.</i>
+
  <b>`This is a custom OS made with x86 Assembly and C.`<br><br></b>
  <img src="https://web.craftingrealm.tk/Images/Projects/os.png">
  Please Check [Releases](https://github.com/PranavVerma-droid/InfinityX-OS/releases) For the Latest Compiled Version of this OS. <br><br>
