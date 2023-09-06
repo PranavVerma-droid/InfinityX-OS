@@ -21,12 +21,13 @@ sudo apt-get install linux-image-generic
 
 python3 -m pip install -r requirements.txt
 echo ""
-LOCALPATH=$(pwd)
-echo "The Current Local Path is $(pwd). Please Change it in the Script if it is Wrong (It needs to be Where the Repository Files Are.)
 
 cd /
 
 sudo mkdir toolchains
+
+LOCALPATH=$(pwd)
+echo "The Current Local Path is $(pwd). Please Change it in the Script if it is Wrong (It needs to be Where the Repository Files Are.)
 cd ${LOCALPATH}
 
 chmod +x scripts/setup_toolchain.sh
